@@ -1,7 +1,6 @@
 package com.hackaton.wayhome.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +29,7 @@ public class Housing {
     String imgUrl2;
     String imgUrl3;
     String location;
+    Double price;
     int ratio;
 
     @JsonIgnore
@@ -37,7 +37,7 @@ public class Housing {
     List<Spec> specs = new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "publiser_id")
-    private Seller publiser;
+    @JoinColumn(name = "publisher_id")
+    private Seller publisher;
 
 }
