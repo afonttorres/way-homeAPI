@@ -15,6 +15,7 @@ class SpecServiceTest {
 
     @Test
     void getAll() {
+
     }
 
     @Test

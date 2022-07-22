@@ -47,7 +47,7 @@ class HousingServiceTest {
     }
 
     @Test
-    void getByIdShouldntReturnHousingByPamIdIfHousingDoesntExist() {
+    void getByIdShouldntReturnHousingByPamIdIfHousingDoesntExistAndThrowsEx() {
         var service = new HousingService(housingRepository);
         Exception ex = assertThrows(NotFoundException.class, ()->{
             service.getById(1L);
