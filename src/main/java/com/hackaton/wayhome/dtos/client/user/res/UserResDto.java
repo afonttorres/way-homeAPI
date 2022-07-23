@@ -1,11 +1,9 @@
 package com.hackaton.wayhome.dtos.client.user.res;
 
 import com.hackaton.wayhome.dtos.pet.PetResDto;
-import com.hackaton.wayhome.models.pet.Pet;
 import lombok.Data;
 import org.springframework.lang.Nullable;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Data

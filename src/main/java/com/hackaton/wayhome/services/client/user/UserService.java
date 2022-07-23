@@ -22,10 +22,7 @@ public class UserService implements IUserService{
     public List<UserResDto> getAll() {
         List<UserResDto> res = new ArrayList<>();
         var users = userRepository.findAll();
-        users.forEach(User -> {
-            res.add(new UserMapper().mapUserToRes(User));
-        });
-        return res;
+        return new UserMapper().mapMultipleUsersToRes(users);
     }
 
     @Override

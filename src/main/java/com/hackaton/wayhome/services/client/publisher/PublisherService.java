@@ -22,15 +22,13 @@ public class PublisherService implements IPublisherService {
     public List<PublisherResDto> getAll() {
         List<PublisherResDto> res = new ArrayList<>();
         var publishers =  publisherRepository.findAll();
-        publishers.forEach(Publisher -> res.add(new PublisherMapper().mapPublisherToRes(Publisher)));
-        return res;
+        return new PublisherMapper().mapMultiplePublishersToRes(publishers);
     }
 
     @Override
     public PublisherResDto getById(Long id) {
         var publisher = publisherRepository.findById(id);
         if(publisher.isEmpty()) throw new NotFoundException("Publisher Not Found", "PB-404");
-        var res = new PublisherMapper().mapPublisherToRes(publisher.get());
-        return res;
+        return  new PublisherMapper().mapPublisherToRes(publisher.get());
     }
 }

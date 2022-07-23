@@ -1,10 +1,15 @@
 package com.hackaton.wayhome.mappers;
 
+import com.hackaton.wayhome.dtos.client.publisher.res.PublisherResDto;
 import com.hackaton.wayhome.dtos.client.user.res.UserNestedResDto;
 import com.hackaton.wayhome.dtos.client.user.req.UserPostReqDto;
 import com.hackaton.wayhome.dtos.client.user.req.UserPutReqDto;
 import com.hackaton.wayhome.dtos.client.user.res.UserResDto;
+import com.hackaton.wayhome.models.client.Publisher;
 import com.hackaton.wayhome.models.client.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserMapper {
     public User mapPostReqToUser(UserPostReqDto req){
@@ -56,6 +61,12 @@ public class UserMapper {
         res.setCitty(user.getCitty());
         res.setCreatedDate(user.getCreatedDate());
         res.setPets(new PetMapper().mapMultiplePetsToRes(user.getPets()));
+        return res;
+    }
+
+    public List<UserResDto> mapMultipleUsersToRes(List<User> users){
+        List<UserResDto>  res = new ArrayList<>();
+        users.forEach(User -> res.add(this.mapUserToRes(User)));
         return res;
     }
 }

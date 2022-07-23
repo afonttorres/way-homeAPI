@@ -7,6 +7,9 @@ import com.hackaton.wayhome.dtos.client.publisher.req.PublisherPutReqDto;
 import com.hackaton.wayhome.dtos.client.publisher.res.PublisherResDto;
 import com.hackaton.wayhome.models.client.Publisher;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PublisherMapper {
     public Publisher mapPostReqToUser(PublisherPostReqDto req){
         var publisher = new Publisher();
@@ -55,6 +58,12 @@ public class PublisherMapper {
         res.setCountry(publisher.getCountry());
         res.setCitty(publisher.getCitty());
         res.setCreatedDate(publisher.getCreatedDate());
+        return res;
+    }
+
+    public List<PublisherResDto> mapMultiplePublishersToRes(List<Publisher> publishers){
+        List<PublisherResDto>  res = new ArrayList<>();
+        publishers.forEach(Publisher -> res.add(this.mapPublisherToRes(Publisher)));
         return res;
     }
 }
