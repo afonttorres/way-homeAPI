@@ -17,3 +17,15 @@ INTO
   (name, surname, username, email, password, created_Date)
 VALUES
   ('nil', 'font', 'nfont', 'nft@gmail.com', 'password', NOW());
+INSERT
+INTO
+  pets
+  (name, type, user_id)
+VALUES
+  ('Ron', 0, 1);
+INSERT
+INTO
+  pets
+  (name, type, user_id)
+VALUES
+  ('Sira', 0, 1);

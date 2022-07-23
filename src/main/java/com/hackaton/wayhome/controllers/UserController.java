@@ -1,6 +1,6 @@
 package com.hackaton.wayhome.controllers;
 
-import com.hackaton.wayhome.dtos.client.user.UserResDto;
+import com.hackaton.wayhome.dtos.client.user.res.UserResDto;
 import com.hackaton.wayhome.models.client.User;
 import com.hackaton.wayhome.services.client.user.IUserService;
 import org.springframework.http.HttpStatus;
@@ -23,15 +23,16 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    ResponseEntity<List<UserResDto>> getAllUsers(){
+    ResponseEntity<List<UserResDto>> getAll(){
         var users = userService.getAll();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
     @GetMapping("/users/{id}")
-    ResponseEntity<UserResDto> getAllUsers(@PathVariable Long id){
+    ResponseEntity<UserResDto> getById(@PathVariable Long id){
         var user = userService.getById(id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
+
 
 }

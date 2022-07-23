@@ -1,13 +1,11 @@
 package com.hackaton.wayhome.mappers;
 
 
-import com.hackaton.wayhome.dtos.client.publisher.PublisherNestedResDto;
-import com.hackaton.wayhome.dtos.client.publisher.PublisherPostReqDto;
-import com.hackaton.wayhome.dtos.client.publisher.PublisherPutReqDto;
-import com.hackaton.wayhome.dtos.client.publisher.PublisherResDto;
-import com.hackaton.wayhome.dtos.client.user.UserResDto;
+import com.hackaton.wayhome.dtos.client.publisher.res.PublisherNestedResDto;
+import com.hackaton.wayhome.dtos.client.publisher.req.PublisherPostReqDto;
+import com.hackaton.wayhome.dtos.client.publisher.req.PublisherPutReqDto;
+import com.hackaton.wayhome.dtos.client.publisher.res.PublisherResDto;
 import com.hackaton.wayhome.models.client.Publisher;
-import com.hackaton.wayhome.models.client.User;
 
 public class PublisherMapper {
     public Publisher mapPostReqToUser(PublisherPostReqDto req){
@@ -41,6 +39,7 @@ public class PublisherMapper {
         res.setUsername(publisher.getUsername());
         res.setEmail(publisher.getEmail());
         res.setPhone(publisher.getPhone());
+        res.setCreatedDate(publisher.getCreatedDate());
         return res;
     }
 
@@ -55,6 +54,7 @@ public class PublisherMapper {
         res.setPhone(publisher.getPhone());
         res.setCountry(publisher.getCountry());
         res.setCitty(publisher.getCitty());
+        res.setCreatedDate(publisher.getCreatedDate());
         return res;
     }
 }

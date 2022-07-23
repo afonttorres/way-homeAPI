@@ -1,10 +1,10 @@
-package com.hackaton.wayhome.dtos.client.publisher;
+package com.hackaton.wayhome.dtos.client.user.req;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
 
 @Data
-public class PublisherAuthReqDto {
+public class UserAuthReqDto {
     @NotNull
     String email;
     @NotNull

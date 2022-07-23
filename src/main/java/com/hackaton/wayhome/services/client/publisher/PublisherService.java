@@ -1,6 +1,6 @@
 package com.hackaton.wayhome.services.client.publisher;
 
-import com.hackaton.wayhome.dtos.client.publisher.PublisherResDto;
+import com.hackaton.wayhome.dtos.client.publisher.res.PublisherResDto;
 import com.hackaton.wayhome.exceptions.NotFoundException;
 import com.hackaton.wayhome.mappers.PublisherMapper;
 import com.hackaton.wayhome.repositories.IPublisherRepository;

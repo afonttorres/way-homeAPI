@@ -1,10 +1,13 @@
-package com.hackaton.wayhome.dtos.client.user;
+package com.hackaton.wayhome.dtos.client.publisher.res;
 
+import com.hackaton.wayhome.models.pet.Pet;
 import lombok.Data;
 import org.springframework.lang.Nullable;
 
+import java.util.List;
+
 @Data
-public class UserNestedResDto {
+public class PublisherNestedResDto {
     Long id;
     @Nullable
     String avatar;
@@ -14,4 +17,5 @@ public class UserNestedResDto {
     String email;
     @Nullable
     Long phone;
+    private java.util.Calendar createdDate;
 }

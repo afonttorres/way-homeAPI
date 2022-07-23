@@ -1,11 +1,10 @@
 package com.hackaton.wayhome.mappers;
 
-import com.hackaton.wayhome.dtos.client.user.UserNestedResDto;
-import com.hackaton.wayhome.dtos.client.user.UserPostReqDto;
-import com.hackaton.wayhome.dtos.client.user.UserPutReqDto;
-import com.hackaton.wayhome.dtos.client.user.UserResDto;
+import com.hackaton.wayhome.dtos.client.user.res.UserNestedResDto;
+import com.hackaton.wayhome.dtos.client.user.req.UserPostReqDto;
+import com.hackaton.wayhome.dtos.client.user.req.UserPutReqDto;
+import com.hackaton.wayhome.dtos.client.user.res.UserResDto;
 import com.hackaton.wayhome.models.client.User;
-import org.springframework.lang.Nullable;
 
 public class UserMapper {
     public User mapPostReqToUser(UserPostReqDto req){
@@ -39,6 +38,8 @@ public class UserMapper {
         res.setUsername(user.getUsername());
         res.setEmail(user.getEmail());
         res.setPhone(user.getPhone());
+        res.setCreatedDate(user.getCreatedDate());
+        res.setPets(new PetMapper().mapMultiplePetsToRes(user.getPets()));
         return res;
     }
 
@@ -53,6 +54,8 @@ public class UserMapper {
         res.setPhone(user.getPhone());
         res.setCountry(user.getCountry());
         res.setCitty(user.getCitty());
+        res.setCreatedDate(user.getCreatedDate());
+        res.setPets(new PetMapper().mapMultiplePetsToRes(user.getPets()));
         return res;
     }
 }

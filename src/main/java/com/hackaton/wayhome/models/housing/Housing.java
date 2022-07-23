@@ -9,6 +9,7 @@ import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -45,14 +46,19 @@ public class Housing {
     @Temporal(TemporalType.TIMESTAMP)
     private java.util.Calendar createdDate;
 
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @OneToMany(mappedBy = "housing")
     List<Pet> pets = new ArrayList<>();
 
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @OneToMany(mappedBy = "housing")
     List<Picture> pictures = new ArrayList<>();
+
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @JsonIgnore
     @OneToMany(mappedBy = "housing")
     List<Spec> specs = new ArrayList<>();
+
     @ManyToOne
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;

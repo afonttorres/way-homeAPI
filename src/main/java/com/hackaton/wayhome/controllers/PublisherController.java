@@ -1,7 +1,6 @@
 package com.hackaton.wayhome.controllers;
 
-import com.hackaton.wayhome.dtos.client.publisher.PublisherResDto;
-import com.hackaton.wayhome.models.client.Publisher;
+import com.hackaton.wayhome.dtos.client.publisher.res.PublisherResDto;
 import com.hackaton.wayhome.services.client.publisher.IPublisherService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

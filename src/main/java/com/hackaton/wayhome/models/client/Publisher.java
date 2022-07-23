@@ -1,14 +1,18 @@
 package com.hackaton.wayhome.models.client;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hackaton.wayhome.models.housing.Housing;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -41,6 +45,12 @@ public class Publisher{
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private java.util.Calendar createdDate;
+
+
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    @OneToMany(mappedBy = "publisher")
+    @JsonIgnore
+    private List<Housing> housings = new ArrayList<>();
 }
 
 

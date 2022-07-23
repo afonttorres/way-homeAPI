@@ -1,10 +1,10 @@
-package com.hackaton.wayhome.dtos.client.publisher;
+package com.hackaton.wayhome.dtos.client.user.req;
 
 import lombok.Data;
 import org.springframework.lang.Nullable;
 
 @Data
-public class PublisherPutReqDto {
+public class UserPutReqDto {
     @Nullable
     private String avatar;
     private String name;

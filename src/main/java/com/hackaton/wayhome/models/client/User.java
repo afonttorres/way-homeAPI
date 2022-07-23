@@ -6,6 +6,7 @@ import com.hackaton.wayhome.models.pet.Pet;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
@@ -40,5 +41,10 @@ public class User{
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private java.util.Calendar createdDate;
+
+    @JsonIgnore
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    @OneToMany(mappedBy = "user")
+    private List<Pet> pets = new ArrayList<>();
 }
 
