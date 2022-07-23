@@ -1,6 +1,6 @@
 package com.hackaton.wayhome.services.housing;
 
-import com.hackaton.wayhome.models.Housing;
+import com.hackaton.wayhome.models.housing.Housing;
 
 import java.util.List;
 
@@ -9,5 +9,4 @@ public interface IHousingService {
 
     Housing getById(Long id);
 
-    List<Housing> findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(String search);
 }

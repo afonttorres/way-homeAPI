@@ -1,7 +1,7 @@
 package com.hackaton.wayhome.services.match;
 
-import com.hackaton.wayhome.dtos.MatchReqDto;
-import com.hackaton.wayhome.models.Match;
+import com.hackaton.wayhome.dtos.match.MatchReqDto;
+import com.hackaton.wayhome.models.match.Match;
 
 import java.util.List;
 

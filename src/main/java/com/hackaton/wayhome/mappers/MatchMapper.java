@@ -1,16 +1,15 @@
 package com.hackaton.wayhome.mappers;
 
-import com.hackaton.wayhome.dtos.MatchReqDto;
-import com.hackaton.wayhome.models.Housing;
-import com.hackaton.wayhome.models.Match;
-import com.hackaton.wayhome.models.Seller;
-import com.hackaton.wayhome.models.User;
+import com.hackaton.wayhome.models.housing.Housing;
+import com.hackaton.wayhome.models.match.Match;
+import com.hackaton.wayhome.models.client.Publisher;
+import com.hackaton.wayhome.models.client.User;
 
 public class MatchMapper {
-    public Match mapToMatch(User u, Seller s, Housing h){
+    public Match mapToMatch(User u, Publisher s, Housing h){
         var match = new Match();
         match.setUser(u);
-        match.setSeller(s);
+        match.setPublisher(s);
         match.setHousing(h);
        return match;
     }

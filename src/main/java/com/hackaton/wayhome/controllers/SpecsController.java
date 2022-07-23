@@ -1,8 +1,6 @@
 package com.hackaton.wayhome.controllers;
 
-import com.hackaton.wayhome.dtos.SpecResDto;
-import com.hackaton.wayhome.models.Spec;
-import com.hackaton.wayhome.repositories.ISpecRepository;
+import com.hackaton.wayhome.dtos.spec.SpecResDto;
 import com.hackaton.wayhome.services.spec.ISpecService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

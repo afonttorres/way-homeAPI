@@ -2,7 +2,7 @@ package com.hackaton.wayhome.controllers;
 
 import com.hackaton.wayhome.exceptions.BadRequestException;
 import com.hackaton.wayhome.exceptions.NotFoundException;
-import com.hackaton.wayhome.dtos.ErrorDto;
+import com.hackaton.wayhome.dtos.error.ErrorDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

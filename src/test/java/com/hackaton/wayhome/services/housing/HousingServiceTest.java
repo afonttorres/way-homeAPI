@@ -1,8 +1,8 @@
 package com.hackaton.wayhome.services.housing;
 
 import com.hackaton.wayhome.exceptions.NotFoundException;
-import com.hackaton.wayhome.models.Housing;
-import com.hackaton.wayhome.models.Seller;
+import com.hackaton.wayhome.models.housing.Housing;
+import com.hackaton.wayhome.models.client.Publisher;
 import com.hackaton.wayhome.repositories.IHousingRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -94,8 +94,8 @@ class HousingServiceTest {
         return housing;
     }
 
-    private Seller createSeller(Long id){
-        var seller = new Seller();
+    private Publisher createSeller(Long id){
+        var seller = new Publisher();
         seller.setName("name");
         seller.setUsername("username");
         seller.setEmail("email");

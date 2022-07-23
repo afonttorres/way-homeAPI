@@ -1,15 +1,14 @@
 package com.hackaton.wayhome.services.match;
 
-import com.hackaton.wayhome.dtos.MatchReqDto;
+import com.hackaton.wayhome.dtos.match.MatchReqDto;
 import com.hackaton.wayhome.exceptions.NotFoundException;
-import com.hackaton.wayhome.models.Housing;
-import com.hackaton.wayhome.models.Match;
-import com.hackaton.wayhome.models.Seller;
-import com.hackaton.wayhome.models.User;
+import com.hackaton.wayhome.models.housing.Housing;
+import com.hackaton.wayhome.models.match.Match;
+import com.hackaton.wayhome.models.client.Publisher;
+import com.hackaton.wayhome.models.client.User;
 import com.hackaton.wayhome.repositories.IHousingRepository;
 import com.hackaton.wayhome.repositories.IMatchRepository;
 import com.hackaton.wayhome.repositories.IUserRepository;
-import com.hackaton.wayhome.services.housing.HousingService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -77,7 +76,7 @@ class MatchServiceTest {
         Mockito.when(housingRepository.save(any(Housing.class))).thenReturn(match.getHousing());
         Mockito.when(matchRepository.save(any(Match.class))).thenReturn(match);
         var sut = service.create(req);
-        assertThat(sut.getSeller(), equalTo(match.getSeller()));
+        assertThat(sut.getPublisher(), equalTo(match.getPublisher()));
     }
 
     @Test
@@ -108,7 +107,7 @@ class MatchServiceTest {
 
     private Housing createHousing(Long id){
         var housing = new Housing();
-        var seller = this.createSeller(id);
+        var seller = this.createPublisher(id);
         housing.setTitle("title");
         housing.setDescription("desc");
         housing.setCategory("cat");
@@ -124,13 +123,13 @@ class MatchServiceTest {
         return housing;
     }
 
-    private Seller createSeller(Long id){
-        var seller = new Seller();
+    private Publisher createPublisher(Long id){
+        var seller = new Publisher();
         seller.setName("name");
         seller.setUsername("username");
         seller.setEmail("email");
-        seller.setAvatarUrl("avatar");
-        seller.setLocation("loc");
+        seller.setAvatar("avatar");
+        seller.setCitty("loc");
         seller.setId(id);
         return seller;
     }
@@ -140,19 +139,18 @@ class MatchServiceTest {
         user.setName("name");
         user.setUsername("user");
         user.setEmail("email");
-        user.setAnimal("animal");
-        user.setLocation("loc");
-        user.setAvatarUrl("avatar");
+        user.setCitty("loc");
+        user.setAvatar("avatar");
         user.setId(id);
         return user;
     }
 
     private Match createMatch(Long id){
-        var seller = this.createSeller(id);
+        var seller = this.createPublisher(id);
         var user = this.createUser(id);
         var housing = this.createHousing(id);
         var match = new Match();
-        match.setSeller(seller);
+        match.setPublisher(seller);
         match.setUser(user);
         match.setHousing(housing);
         match.setId(id);

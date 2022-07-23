@@ -1,6 +1,6 @@
 package com.hackaton.wayhome.services.spec;
 
-import com.hackaton.wayhome.dtos.SpecResDto;
+import com.hackaton.wayhome.dtos.spec.SpecResDto;
 
 import java.util.List;
 

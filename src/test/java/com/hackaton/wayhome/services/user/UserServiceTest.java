@@ -1,10 +1,9 @@
 package com.hackaton.wayhome.services.user;
 
 import com.hackaton.wayhome.exceptions.NotFoundException;
-import com.hackaton.wayhome.models.Housing;
-import com.hackaton.wayhome.models.User;
+import com.hackaton.wayhome.models.client.User;
 import com.hackaton.wayhome.repositories.IUserRepository;
-import com.hackaton.wayhome.services.housing.HousingService;
+import com.hackaton.wayhome.services.client.user.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;

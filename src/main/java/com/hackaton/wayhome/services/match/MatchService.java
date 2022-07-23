@@ -1,9 +1,9 @@
 package com.hackaton.wayhome.services.match;
 
-import com.hackaton.wayhome.dtos.MatchReqDto;
+import com.hackaton.wayhome.dtos.match.MatchReqDto;
 import com.hackaton.wayhome.exceptions.NotFoundException;
 import com.hackaton.wayhome.mappers.MatchMapper;
-import com.hackaton.wayhome.models.Match;
+import com.hackaton.wayhome.models.match.Match;
 import com.hackaton.wayhome.repositories.IHousingRepository;
 import com.hackaton.wayhome.repositories.IMatchRepository;
 import com.hackaton.wayhome.repositories.IUserRepository;

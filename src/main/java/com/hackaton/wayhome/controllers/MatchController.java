@@ -1,7 +1,7 @@
 package com.hackaton.wayhome.controllers;
 
-import com.hackaton.wayhome.dtos.MatchReqDto;
-import com.hackaton.wayhome.models.Match;
+import com.hackaton.wayhome.dtos.match.MatchReqDto;
+import com.hackaton.wayhome.models.match.Match;
 import com.hackaton.wayhome.services.match.IMatchService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package com.hackaton.wayhome.services.housing;
 
 import com.hackaton.wayhome.exceptions.NotFoundException;
-import com.hackaton.wayhome.models.Housing;
+import com.hackaton.wayhome.models.housing.Housing;
 import com.hackaton.wayhome.repositories.IHousingRepository;
 import org.springframework.stereotype.Service;
 
@@ -28,8 +28,8 @@ public class HousingService implements IHousingService {
         return housing.get();
     }
 
-    @Override
-    public List<Housing> findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(String search) {
-        return housingRepository.findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(search);
-    }
+//    @Override
+//    public List<Housing> findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(String search) {
+//        return housingRepository.findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(search);
+//    }
 }

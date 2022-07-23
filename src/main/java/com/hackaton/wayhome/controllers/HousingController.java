@@ -1,9 +1,9 @@
 package com.hackaton.wayhome.controllers;
 
 
-import com.hackaton.wayhome.models.Housing;
+import com.hackaton.wayhome.models.housing.Housing;
 import com.hackaton.wayhome.services.housing.IHousingService;
-import com.hackaton.wayhome.services.seller.ISellerService;
+import com.hackaton.wayhome.services.client.publisher.IPublisherService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,11 +15,11 @@ import java.util.List;
 public class HousingController {
 
     IHousingService housingService;
-    ISellerService sellerService;
+    IPublisherService sellerService;
 
     public HousingController(
             IHousingService housingService,
-            ISellerService sellerService
+            IPublisherService sellerService
     ){
         this.housingService=housingService;
         this.sellerService=sellerService;
@@ -36,8 +36,8 @@ public class HousingController {
         return new ResponseEntity<>(housing, HttpStatus.OK);
     }
 
-    @GetMapping(value="/housings", params="search")
-    List<Housing> getSearch(@RequestParam String search){
-        return housingService.findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(search);
-    }
+//    @GetMapping(value="/housings", params="search")
+//    List<Housing> getSearch(@RequestParam String search){
+//        return housingService.findByTitleContainsOrDescriptionContainsOrCategoryContainsOrAnimalContainsOrLocationContainsAllIgnoreCase(search);
+//    }
 }

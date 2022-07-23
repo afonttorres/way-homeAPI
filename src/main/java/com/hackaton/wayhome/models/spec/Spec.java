@@ -1,6 +1,8 @@
-package com.hackaton.wayhome.models;
+package com.hackaton.wayhome.models.spec;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hackaton.wayhome.models.housing.Housing;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +20,8 @@ public class Spec {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    String spec;
+    @NotNull
+    SpecType spec;
 
     @ManyToOne
     @JoinColumn(name = "housing_id")

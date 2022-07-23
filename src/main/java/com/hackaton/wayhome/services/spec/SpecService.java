@@ -1,12 +1,10 @@
 package com.hackaton.wayhome.services.spec;
 
-import com.hackaton.wayhome.dtos.SpecResDto;
+import com.hackaton.wayhome.dtos.spec.SpecResDto;
 import com.hackaton.wayhome.exceptions.NotFoundException;
 import com.hackaton.wayhome.mappers.SpecMapper;
-import com.hackaton.wayhome.models.Spec;
 import com.hackaton.wayhome.repositories.IHousingRepository;
 import com.hackaton.wayhome.repositories.ISpecRepository;
-import com.hackaton.wayhome.services.housing.IHousingService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

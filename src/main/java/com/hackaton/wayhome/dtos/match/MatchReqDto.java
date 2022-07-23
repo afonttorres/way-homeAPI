@@ -1,4 +1,4 @@
-package com.hackaton.wayhome.dtos;
+package com.hackaton.wayhome.dtos.match;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

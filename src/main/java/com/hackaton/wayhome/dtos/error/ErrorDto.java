@@ -1,4 +1,4 @@
-package com.hackaton.wayhome.dtos;
+package com.hackaton.wayhome.dtos.error;
 
 import lombok.Builder;
 import lombok.Data;
