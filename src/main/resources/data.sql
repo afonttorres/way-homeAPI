@@ -148,31 +148,31 @@ INTO
 specs
     (spec, housing_id)
 VALUES
-    ('wifi', 2);
+    ('heating', 2);
 INSERT
 INTO
 specs
     (spec, housing_id)
 VALUES
-    ('bath', 2);
+    ('shower', 2);
 INSERT
 INTO
 specs
     (spec, housing_id)
 VALUES
-    ('lift', 2);
+    ('dressing room', 2);
 INSERT
 INTO
 specs
     (spec, housing_id)
 VALUES
-    ('garden', 2);
+    ('balcony', 2);
 INSERT
 INTO
 specs
     (spec, housing_id)
 VALUES
-    ('pool', 3);
+    ('fireplace', 3);
 INSERT
 INTO
 specs
@@ -184,7 +184,7 @@ INTO
 specs
     (spec, housing_id)
 VALUES
-    ('bath', 3);
+    ('fournished', 3);
 INSERT
 INTO
 specs
@@ -196,19 +196,19 @@ INTO
 specs
     (spec, housing_id)
 VALUES
-    ('garden', 3);
+    ('appliances', 3);
 INSERT
 INTO
 specs
     (spec, housing_id)
 VALUES
-    ('pool', 4);
+    ('3 bedrooms', 4);
 INSERT
 INTO
 specs
     (spec, housing_id)
 VALUES
-    ('wifi', 4);
+    ('smoke allowed', 4);
 INSERT
 INTO
 specs
@@ -226,7 +226,7 @@ INTO
 specs
     (spec, housing_id)
 VALUES
-    ('garden', 4);
+    ('air conditioning', 4);
 INSERT
 INTO
 specs
